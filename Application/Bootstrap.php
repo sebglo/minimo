@@ -8,20 +8,19 @@ error_reporting(E_ALL);
 /**
  * Identifiants de la base de données
  */
-DEFINE('DB_DRIVER','sqlite');
+//DEFINE('DB_DRIVER','sqlite');
 DEFINE('DB_PATH', realpath("./database.sqlite") );
 
-// DEFINE('DB_DRIVER','mysql'); //décommenter pour utiliser MySQL plutôt que SQLite (il faut alors commenter la ligne 11)
+DEFINE('DB_DRIVER','mysql'); //décommenter pour utiliser MySQL plutôt que SQLite (il faut alors commenter la ligne 11)
 DEFINE('DB_HOST','localhost');
 DEFINE('DB_NAME','blog');
-DEFINE('DB_USER','root');
-DEFINE('DB_PWD','');
+DEFINE('DB_USER','sebglo');
+DEFINE('DB_PWD','1234');
 
 /**
  * Base URL du site pour générer des liens dans l'application
  */
-// $base_url = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/';
-$base_url = '/';
+$base_url = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/';
 DEFINE('BASE_URL',$base_url);
 
 

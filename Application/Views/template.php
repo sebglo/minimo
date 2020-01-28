@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Simple Blog MVC | Welcome</title>
+<title>minimo | Welcome</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="menu">
-        <li class="menu-text"><a href="<?php echo BASE_URL; ?>">Accueil</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=news">News</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=blog">Blog</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=contact">Contact</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=page&name=mentions-legales">Mentions légales</a></li>
+        <li class="menu-text"><a href="<?php echo BASE_URL; ?>">MINIM0</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=news">LIFESTYLE</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=blog">PHOTODIARY</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=contact">MUSIC</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=page&name=mentions-legales">TRAVEL</a></li>
         </ul>
     </div>
     <div class="top-bar-right">
