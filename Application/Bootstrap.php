@@ -20,8 +20,8 @@ DEFINE('DB_PWD','1234');
 /**
  * Base URL du site pour générer des liens dans l'application
  */
-//$base_url = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/';
-$base_url = '/';
+$base_url = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/';
+//$base_url = '/';
 DEFINE('BASE_URL',$base_url);
 
 
