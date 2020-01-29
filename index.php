@@ -5,10 +5,31 @@ session_start(); //démarre une session PHP, pour que l'on puisse utiliser $_SES
 
 //récupère le paramètre "action" de l'url qui sera utilisé par le contrôleur
 if (!isset($_GET['action'])) {
-  $action = "accueil";
-} else {
-  $action = $_GET['action'];
-} 
+  //$action = "accueil";
+
+
+  if ($_GET['action'] == 'accueil') {
+    $action = "accueil";
+  } elseif ($_GET['action'] == 'newletter') {
+    //if (isset($_GET['id']) && $_GET['id'] > 0) {
+      //on entre les email dans la base de donnee
+    } else {
+      // Erreur ! On arrête tout, on envoie une exception, donc au saute directement au catch
+      throw new Exception('Aucun identifiant de billet envoyé');
+    }
+  } elseif ($_GET['action'] == 'articles&category=lifestile') {
+    //if (isset($_GET['id']) && $_GET['id'] > 0) {
+      //on accede a la page lifestyle
+    } else {
+      // Erreur ! On arrête tout, on envoie une exception, donc au saute directement au catch
+      throw new Exception('Aucun identifiant de billet envoyé');
+    }
+  } else {
+    $action = $_GET['action'];
+  }
+}
+
+//récupère le paramètre "action" de l'url qui sera utilisé par le contrôleur
 
 $controller = new Application\Controllers\Frontend(); //Crée un objet Frontend, qui est le contrôleur de base de l'application
 

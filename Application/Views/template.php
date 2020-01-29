@@ -5,17 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>minimo | Welcome</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<link rel="stylesheet" href="minimo/public/css/css.scss">
+<style>
+    
+</style>
+
+
 </head>
 <body>
 
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="menu">
-        <li class="menu-text"><a href="<?php echo BASE_URL; ?>">MINIM0</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=news">LIFESTYLE</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=blog">PHOTODIARY</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=contact">MUSIC</a></li>
-        <li><a href="<?php echo BASE_URL; ?>?action=page&name=mentions-legales">TRAVEL</a></li>
+        <li class="menu-text"><a href="<?php echo BASE_URL; ?> ?action=accueil">MINIM0</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=lifestile">LIFESTYLE</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=photodiary">PHOTODIARY</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=music">MUSIC</a></li>
+        <li><a href="<?php echo BASE_URL; ?>?action=articles&category=travel">TRAVEL</a></li>
         </ul>
     </div>
     <div class="top-bar-right">
@@ -25,12 +31,17 @@
     </div>
 </div>
 
-<div class="callout large primary">
+<!--<div class="callout large primary">-->
+<div>
+
     <div class="row column text-center">
     <h1>Un Blog</h1>
+    <!--<img src="01.png">-->
+    <img src="public/images/01_image_principale.png">
     <h2 class="subheader">Simple MVC, simple mise en page</h2>
     </div>
 </div>
+
 
 <br/>
 
