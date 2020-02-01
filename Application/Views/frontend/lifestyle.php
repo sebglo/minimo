@@ -2,11 +2,11 @@
 
 <div class="row medium-8 large-7 columns">
 
-<h2>Titre: <?php echo $this->data['page']->title(); ?></h2>
+<h2>Titre: <?php echo $this->data['lifestyle']->title(); ?></h2>
 
 <h4>Contenu: </h4>
 
-<?php echo $this->data['page']->content(); ?>
+<?php echo $this->data['lifestyle']->content(); ?>
 
 <hr>
 

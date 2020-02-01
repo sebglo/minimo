@@ -70,6 +70,23 @@ Class Frontend {
     }
 
     /**
+     * Affiche une page lifestyle
+     * @param String $name: l'url de la page (colonne)
+     */
+    function lifestyle($name = "lifestyle")
+    {
+      if(isset($_GET['name']) and $_GET['name'] != "") $name = $_GET['name'];
+
+        $page = new \Application\Models\Page([]);
+
+        $this->view->setVar('lifestyle', $page);
+        $this->view->setVar('view', 'frontend/'.$name);
+
+        //on appelle la template, qui va utiliser la view que l'on a choisie
+        echo $this->view->render();
+    }
+
+    /**
      * Affiche la page des articles
      * @param String $category : Permet de trier les articles par catégorie
      */

@@ -8,18 +8,32 @@ session_start(); //démarre une session PHP, pour que l'on puisse utiliser $_SES
 //-------------origine----------------
 /*if (!isset($_GET['action'])) {
   $action = "accueil";
-} else {
+} 
+else {
   $action = $_GET['action'];
 }*/
-//--------------------------------- 
+//-----------test---------------------- 
+/*if (!isset($_GET['action'])) {
+  $action = "accueil";
+} 
+
+if (!isset($_GET['action'])) {
+  $action1 = "lifestyle";
+} 
+else {
+  $action = $_GET['action'];
+}
+*/
+//--------------test-----------------
 if (!isset($_GET['action'])) {
   if ($_GET['action'] == 'accueil') {
-    $action = "accueil";
+    $action = "accueil";}
   if ($_GET['action'] == 'lifestyle') {
-    $action = "lifestyle";
+    $action = "lifestyle";}
 } else {
   $action = $_GET['action'];
 }
+//-----------------------------------------
 //-----------a voir plus tard---------------
 
 /*if (!isset($_GET['action'])) {
@@ -56,6 +70,8 @@ $controller = new Application\Controllers\Frontend(); //Crée un objet Frontend,
 
 if (is_callable(array($controller, $action))) { //on vérifie si la méthode "$action" existe dans le contrôleur "$controller"
   $controller->$action(); //si oui, on l'appelle
+  //et apres con fait quoi?
+
 } else {
   $controller->index(); //si non, on appelle la méthode index(), ou une méthode d'erreur par exemple
 }
