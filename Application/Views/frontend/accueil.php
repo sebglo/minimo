@@ -41,14 +41,15 @@
     ?>
 
 <div class="simple-subscription-form">
-<form action="index.php?action=newletter" method="post">
+<!--<form action="index.php?action=newsletter" method="post">-->
+<form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
     <h4>Subscribe</h4>
     <p>Sign up for our newsletter!</p>
     <div class="input-group">
       <span class="input-group-label">
         <i class="fa fa-envelope"></i>
       </span>
-      <input class="input-group-field" type="email" placeholder="Email" required>
+      <input class="input-group-field" type="email" id="email" name="email" placeholder="Email" required>
       <button class="button">Sign up now</button>
   </form>
 

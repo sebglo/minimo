@@ -153,12 +153,30 @@ Class Frontend {
     /**
      * Traite le formulaire de newsletter
      */
-    function newsletter() {
+    function newsletter($name = "newsletter") {
+
+        if(isset($_GET['name']) and $_GET['name'] != "") $name = $_GET['name'];
 
         /***********************************************/
+        //----------ajout pour le formulaire recup email pour newsletter ds bdd---------
+        $email_repository = new \Application\Models\EmailRepository(); //on instancie un repository
+        
+        if (!empty($_POST['email']) ) {
+            $email_repository->create($_GET['id'], $_POST['email']);
+        }
+        else {
+            echo"ça ne marche pas";
+        }
+        $page = new \Application\Models\Page([]);
+
+        $this->view->setVar('page', $page);
+        $this->view->setVar('view', 'frontend/accueil');
+    
+    
+  }
         /***********************************************/
 
         //on appelle la template, qui va utiliser la view que l'on a choisie
-        echo $this->view->render();
-    }
+        // pas sur qu'on utilise une autre vue echo $this->view->render();
 }
+

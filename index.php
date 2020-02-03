@@ -30,38 +30,20 @@ if (!isset($_GET['action'])) {
     $action = "accueil";}
   if ($_GET['action'] == 'lifestyle') {
     $action = "lifestyle";}
+  if ($_GET['action'] == 'newsletter') {
+    if (isset($_GET['id']) && $_GET['id'] > 0){
+      $action = "newsletter"; 
+    }else {
+        // Autre exception
+        throw new Exception('Aucun identifiant de billet envoyé');
+    }
+  }
+    
 } else {
   $action = $_GET['action'];
 }
-//-----------------------------------------
-//-----------a voir plus tard---------------
 
-/*if (!isset($_GET['action'])) {
-  //$action = "accueil";
-
-
-  if ($_GET['action'] == 'accueil') {
-    $action = "accueil";
-  } elseif ($_GET['action'] == 'newletter') {
-    if (isset($_GET['id']) && $_GET['id'] > 0) {
-      //on entre les email dans la base de donnee
-    } else {
-      // Erreur ! On arrête tout, on envoie une exception, donc au saute directement au catch
-      throw new Exception('Aucun identifiant de billet envoyé');
-    }
-  } /*elseif ($_GET['action'] == 'articles&category=lifestile') {
-    //if (isset($_GET['id']) && $_GET['id'] > 0) {
-      //on accede a la page lifestyle
-      $action = "accueil";
-    } else {
-      // Erreur ! On arrête tout, on envoie une exception, donc au saute directement au catch
-      throw new Exception('Aucun identifiant de billet envoyé');
-    }
-  } else {
-    $action = $_GET['action'];
-  }
-}*/
-//----------------------------------------------------
+//------------------------------------------
 
 
 //récupère le paramètre "action" de l'url qui sera utilisé par le contrôleur
@@ -73,5 +55,6 @@ if (is_callable(array($controller, $action))) { //on vérifie si la méthode "$a
   //et apres con fait quoi?
 
 } else {
-  $controller->index(); //si non, on appelle la méthode index(), ou une méthode d'erreur par exemple
+  throw new Exception('sa ne marche pas a la place de la fonction index de frontend');
+  //$controller->index(); //si non, on appelle la méthode index(), ou une méthode d'erreur par exemple
 }
