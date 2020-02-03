@@ -77,9 +77,24 @@ Class Frontend {
     {
       if(isset($_GET['name']) and $_GET['name'] != "") $name = $_GET['name'];
 
-        $page = new \Application\Models\Page([]);
+      //----------------
+      // probleme non resolus a voir plus tard
+      //Exemple de récupération d'une page en base de données
+      $page_repository = new \Application\Models\PageRepository(); //on instancie un repository
+      $donnees_page_accueil = $page_repository->read('accueil'); //on récupère les données depuis la base de données
 
-        $this->view->setVar('lifestyle', $page);
+      $page_accueil = new \Application\Models\Page( $donnees_page_accueil ); //on instancie un objet page (Un modèle) avec les données récupérées par le repository
+
+      //On passe notre objet à la vue. Dans la fichier de la vue, on pourra utiliser la variable $page
+      $this->view->setVar('lifestyle', $page_accueil);     
+      
+      //-------------------
+      
+      //$page = new \Application\Models\Page([]);
+
+        //$this->view->setVar('lifestyle', $page );
+        
+        //On donne le nom de la vue que l'on veut appeler
         $this->view->setVar('view', 'frontend/'.$name);
 
         //on appelle la template, qui va utiliser la view que l'on a choisie

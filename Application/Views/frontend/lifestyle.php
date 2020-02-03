@@ -30,8 +30,8 @@
 // print_r($this->data['posts']);
 
 //il faudra modifier le fichier article-acceuil.php pour qu'il utilise les données de la BDD et pas du HTML brut
-
-foreach($this->data['articles'] as $article)
+require "Application/Views/article.php";
+foreach($this->data['article'] as $article)
 {
   // echo $article->title()."<br/>";
   include 'article-accueil.php'; 
